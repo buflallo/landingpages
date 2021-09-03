@@ -106,7 +106,7 @@
 				width: auto;
 
 				&.device-mockup {
-					max-width: 296px;
+					max-width: 500px;
 				}
 			}
 		}
@@ -147,13 +147,13 @@
 	.feature-extended {
 
 		.feature-extended-image {
-			margin-right: 64px;
+			margin-right: 200px;
 		}
 
 		&:nth-child(even) {
 
 			.feature-extended-image {
-				margin-left: 64px;
+				margin-left: 200px;
 			}
 		}
 	}

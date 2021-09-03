@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
-    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Venus Template</title>
     <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/style.css">
     <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+
+    <style type="text/css">
+    	.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+    </style>
+
 </head>
 <body class="is-boxed has-animations">
     <div class="body-wrap boxed-container">
@@ -25,6 +90,52 @@
             </div>
         </header>
 
+<!-- ---------------------- -->
+
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+	  <form method="POST" action="send.php" style="text-align: right;" action="/action_page.php">
+	  	<input value="commande" type="hidden" name="what">
+	    <label for="fname">الإسم الكامل</label>
+	    <input type="text" id="fname" name="name" placeholder="الإسم الكامل">
+
+	    <label for="lname">الهاتف</label>
+	    <input type="text" id="lname" name="tel" placeholder="الهاتف">
+
+	    <label for="lname">عنوان الإستلام</label>
+	    <input type="text" id="lname" name="adresse" placeholder="عنوان الإستلام">
+	  
+	    <input style="text-align : center;" type="submit" value="تأكيد الطلب">
+	  </form>
+  </div>
+
+</div>
+<!-- ------------------------ -->
+
+<!-- ---------------------- -->
+
+<div id="contact" class="modal">
+
+  <div class="modal-content">
+	  <form method="POST" action="send.php" style="text-align: right;" action="/action_page.php">
+	  	<input value="contact" type="hidden" name="what">
+	    <label for="fname">الإسم الكامل</label>
+	    <input type="text" id="fname" name="name" placeholder="الإسم الكامل">
+
+	    <label for="lname">الهاتف</label>
+	    <input type="text" id="lname" name="tel" placeholder="الهاتف">
+
+	    <label for="lname">ملاحظة</label>
+		</br>
+	    <textarea type="text" id="lname" name="message" placeholder="ملاحظة" ></textarea> 
+	  
+	    <input style="text-align : center;" type="submit" value="إرسال">
+	  </form>
+  </div>
+
+</div>
+<!-- ------------------------ -->
         <main>
             <section class="hero text-center text-light">
 				<div class="hero-bg"></div>
@@ -34,17 +145,17 @@
                 <div class="container-sm">
                     <div class="hero-inner">
 						<div class="hero-copy">
-	                        <h1 class="hero-title mt-0">Landing template for startups</h1>
-	                        <p class="hero-paragraph">Our landing page template works on all devices, so you only have to set it up once, and get beautiful results forever.</p>
+	                        <h1 class="hero-title mt-0">           Algo - ألكو </h1>
+	                        <h2 class="hero-paragraph">مصحح وضعية الجلوس بامتياز</h2>
 	                        <div class="hero-cta">
-								<a class="button button-primary button-wide-mobile" href="#">Get early access</a>
+								<button id="myBtn" class="button button-primary button-wide-mobile" href="#">أطلب الآن</button>
 							</div>
 						</div>
 						<div class="mockup-container">
 							<div class="mockup-bg">
 								<img src="dist/images/iphone-hero-bg.svg" alt="iPhone illustration">
 							</div>
-							<img class="device-mockup" src="dist/images/iphone-hero.png" alt="iPhone Hero">
+							<img class="device-mockup" src="src/images/DFHFGD.png" alt="iPhone Hero">
 						</div>
                     </div>
                 </div>
@@ -56,14 +167,20 @@
 						<div class="container">
 							<div class="feature-extended">
 								<div class="feature-extended-image">
-									<div class="mockup-bg">
+									<div class="mockup-bg friwt">
 										<img src="dist/images/iphone-feature-bg-01.svg" alt="iPhone Feature 01 illustration">
 									</div>
-									<img class="device-mockup is-revealing" src="dist/images/iphone-feature-01.png" alt="iPhone Feature 01">
+									<img class="device-mockup is-revealing" src="src/images/wliydm3aw9.png" alt="iPhone Feature 01">
 								</div>
 								<div class="feature-extended-body is-revealing">
-									<h3 class="mt-0 mb-16">Amazing features, coming soon.</h3>
-									<p class="m-0">Quam quisque id diam vel quam elementum pulvinar. Ut etiam sit amet nisl purus in mollis nunc. Odio morbi quis commodo odio aenean sed adipiscing diam donec.</p>
+									<h3 class="mt-0 mb-16">
+المخاطر التي يتعرض لها الطفل أثناء الدراسة</h3>
+									<p dir='rtl'
+ lang="ar" class="m-0">أجريت عدة دراسات حول آلام الظهر، و وجدت أن نسبة آلام الظهر لدى الطفل تتراوح بين 20 و 70%، و في دراسة أجريت في البرازيل عام 2016 كانت نسبة الإصابة بآلام الظهر لدى الأطفال 55% , أسباب آلام الظهر متعددة مثل الوراثة و الجلوس فترة طويلة في وضعيات خاطئة على التلفاز و الكمبيوتر و غيرهما و عدم ممارسة الرياضة 
+
+									إن آثار وضعية الجلوس الخاطئة على الطفل تشتمل على:
+*المدى القصير آلام الظهر.
+*أما على المدى الطويل و مع تقدم العمر يصاب الطفل -الذي أصبح بالغا بانزلاقات غضروفية تؤثر على الأكتاف و تسبب آلاما فيها + عدم توازن العضلات بين الكتفين.</p>
 								</div>
 							</div>
 							<div class="feature-extended">
@@ -71,11 +188,14 @@
 									<div class="mockup-bg">
 										<img src="dist/images/iphone-feature-bg-02.svg" alt="iPhone Feature 02 illustration">
 									</div>
-									<img class="device-mockup is-revealing" src="dist/images/iphone-feature-02.png" alt="iPhone Feature 02">
+									<img class="device-mockup is-revealing" src="src/images/dhiyr-02.png" alt="iPhone Feature 02">
 								</div>
 								<div class="feature-extended-body is-revealing">
-									<h3 class="mt-0 mb-16">Amazing features, coming soon.</h3>
-									<p class="m-0">Quam quisque id diam vel quam elementum pulvinar. Ut etiam sit amet nisl purus in mollis nunc. Odio morbi quis commodo odio aenean sed adipiscing diam donec.</p>
+									<h3 class="mt-0 mb-16">الوضعية الصحيحة عند المطالعة أو استعمال الأجهزة الإلكترونية</h3>
+									<p class="m-0">الوضعية الصحيحة عند الدراسة في القسم أو استعمال  الأجهزة الإلكترونية، يجب أن يكون الكتاب أو الجهاز اللوحي على مستوى النظر، حتى لا تحدث مشاكل في العنق.
+أما في الصف و في البيت أثناء الدراسة، فوضعية الجلوس الصحيحة هي:
+
+الجلوس على الردفين، وليس على منطقة العصعص (الفقرات السفلية من العمود الفقري)</p>
 								</div>
 							</div>
 							<div class="feature-extended">
@@ -83,23 +203,18 @@
 									<div class="mockup-bg">
 										<img src="dist/images/iphone-feature-bg-03.svg" alt="iPhone Feature 03 illustration">
 									</div>
-									<img class="device-mockup is-revealing" src="dist/images/iphone-feature-03.png" alt="iPhone Feature 03">
+									<img class="device-mockup is-revealing" src="src/images/iphone-hero2.png" alt="iPhone Feature 03">
 								</div>
 								<div class="feature-extended-body is-revealing">
-									<h3 class="mt-0 mb-16">Amazing features, coming soon.</h3>
-									<p class="m-0">Quam quisque id diam vel quam elementum pulvinar. Ut etiam sit amet nisl purus in mollis nunc. Odio morbi quis commodo odio aenean sed adipiscing diam donec.</p>
-								</div>
-							</div>
-							<div class="feature-extended">
-								<div class="feature-extended-image">
-									<div class="mockup-bg">
-										<img src="dist/images/iphone-feature-bg-04.svg" alt="iPhone Feature 04 illustration">
-									</div>
-									<img class="device-mockup is-revealing" src="dist/images/iphone-feature-04.png" alt="iPhone Feature 04">
-								</div>
-								<div class="feature-extended-body is-revealing">
-									<h3 class="mt-0 mb-16">Amazing features, coming soon.</h3>
-									<p class="m-0">Quam quisque id diam vel quam elementum pulvinar. Ut etiam sit amet nisl purus in mollis nunc. Odio morbi quis commodo odio aenean sed adipiscing diam donec.</p>
+									<h3 class="mt-0 mb-16">لماذا ألكو ؟</h3>
+									<p class="m-0">ألكو يساعد على الحصول على وضع جيد في الوقوف والمشي والجلوس والاستلقاء، بطريقة تضع أقل إجهاد على العضلات والأربطة.
+
+– يساعدنا في الحفاظ على العظام والمفاصل في المحاذاة الصحيحة بحيث يتم استخدام عضلاتنا بشكل صحيح، مما يقلل من التآكل غير الطبيعي لأسطح المفاصل الذي يمكن أن يؤدي إلى التهاب المفاصل التنكسية وآلام المفاصل.
+
+نصائح لتعديل وضعية الجسم
+– يقلل من الضغط على الأربطة التي تربط المفاصل الشوكية معاً، مما يقلل من احتمال إصابتها.
+
+– يسمح للعضلات بالعمل بشكل أكثر كفاءة، مما يسمح للجسم باستخدام طاقة أقل، وبالتالي منع إجهاد العضلات</p>
 								</div>
 							</div>
 						</div>
@@ -107,7 +222,6 @@
                 </div>
             </section>
         </main>
-
 		<footer class="site-footer">
 			<div class="footer-particles-container">
 				<canvas id="footer-particles"></canvas>
@@ -117,10 +231,13 @@
 					<div class="container-sm">
 						<div class="cta-inner section-inner">
 							<div class="cta-header text-center">
-								<h2 class="section-title mt-0">Stay in the know</h2>
-								<p class="section-paragraph">Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</p>
+								<h2 class="section-title mt-0">معلومات عن المنتوج</h2>
+								<p class="section-paragraph">قابلة للتعديل إلى زوايا متعددة </p>
+								<p class="section-paragraph">من السهل حملها وتخزينها</p>
+								<p class="section-paragraph">مصنوع من مادة صلبة صعبة الإنكسار </p>
+								<p class="section-paragraph">متعدد الإستعمالات: الدراسة، الطبخ، النقل من دفتر لآخر، الرسم ... وأكثر</p>
 								<div class="cta-cta">
-									<a class="button button-primary button-wide-mobile" href="#">Get early access</a>
+									<button id="myBtn2" class="button button-primary button-wide-mobile" href="#"> أطلب الآن</button>
 								</div>
 							</div>
 						</div>
@@ -137,16 +254,13 @@
 						</div>
 						<ul class="footer-links list-reset">
 							<li>
-								<a href="#">Contact</a>
+								<a href="#" id="cnta"> تواصل معنا</a>
 							</li>
 							<li>
-								<a href="#">About us</a>
+								<a href="cgv.html">الشروط العامة للشراء</a>
 							</li>
 							<li>
-								<a href="#">FAQ's</a>
-							</li>
-							<li>
-								<a href="#">Support</a>
+								<a href="/">القائمة الرئيسية</a>
 							</li>
 						</ul>
 						<ul class="footer-social-links list-reset">
@@ -158,30 +272,45 @@
 									</svg>
 								</a>
 							</li>
-							<li>
-								<a href="#">
-									<span class="screen-reader-text">Twitter</span>
-									<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-										<path d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.7-2.7-.1-5.2-1.4-6.8-3.4-.3.5-.4 1-.4 1.7 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4C.7 7.7 1.8 9 3.3 9.3c-.3.1-.6.1-.9.1-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z" fill="#FFF"/>
-									</svg>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<span class="screen-reader-text">Google</span>
-									<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-										<path d="M7.9 7v2.4H12c-.2 1-1.2 3-4 3-2.4 0-4.3-2-4.3-4.4 0-2.4 2-4.4 4.3-4.4 1.4 0 2.3.6 2.8 1.1l1.9-1.8C11.5 1.7 9.9 1 8 1 4.1 1 1 4.1 1 8s3.1 7 7 7c4 0 6.7-2.8 6.7-6.8 0-.5 0-.8-.1-1.2H7.9z" fill="#FFF"/>
-									</svg>
-								</a>
-							</li>
 						</ul>
-						<div class="footer-copyright">&copy; 2018 Venus, all rights reserved</div>
+						<div class="footer-copyright">&copy; 2021 شركة مكتبة إقرأ جميع الحقوق محفوظة</div>
 					</div>
 				</div>
 			</div>
         </footer>
     </div>
 
+    <script type="text/javascript">
+    	// Get the modal
+var modal = document.getElementById("myModal");
+var contact = document.getElementById("contact");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+var btn2 = document.getElementById("myBtn2");
+var cnta = document.getElementById("cnta");
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+btn2.onclick = function() {
+  modal.style.display = "block";
+}
+cnta.onclick = function() {
+  contact.style.display = "block";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+  if (event.target == contact) {
+    contact.style.display = "none";
+  }
+} 
+
+    </script>
     <script src="dist/js/main.min.js"></script>
 </body>
 </html>

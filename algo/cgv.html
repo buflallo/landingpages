@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Venus Template</title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|Oxygen:700" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="https://unpkg.com/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+
+    <style type="text/css">
+    	.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+    </style>
+
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap boxed-container">
+        <header class="site-header text-light">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+                            <a href="#">
+								<img class="header-logo-image" src="dist/images/logo.svg" alt="Logo">
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+<!-- ---------------------- -->
+
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+	  <form method="POST" action="send.php" style="text-align: right;" action="/action_page.php">
+	  	<input value="commande" type="hidden" name="what">
+	    <label for="fname">الإسم الكامل</label>
+	    <input type="text" id="fname" name="name" placeholder="الإسم الكامل">
+
+	    <label for="lname">الهاتف</label>
+	    <input type="text" id="lname" name="tel" placeholder="الهاتف">
+
+	    <label for="lname">عنوان الإستلام</label>
+	    <input type="text" id="lname" name="adresse" placeholder="عنوان الإستلام">
+	  
+	    <input style="text-align : center;" type="submit" value="تأكيد الطلب">
+	  </form>
+  </div>
+
+</div>
+<!-- ------------------------ -->
+
+<!-- ---------------------- -->
+
+<div id="contact" class="modal">
+
+  <div class="modal-content">
+	  <form method="POST" action="send.php" style="text-align: right;" action="/action_page.php">
+	  	<input value="contact" type="hidden" name="what">
+	    <label for="fname">الإسم الكامل</label>
+	    <input type="text" id="fname" name="name" placeholder="الإسم الكامل">
+
+	    <label for="lname">الهاتف</label>
+	    <input type="text" id="lname" name="tel" placeholder="الهاتف">
+
+	    <label for="lname">ملاحظة</label>
+		</br>
+	    <textarea type="text" id="lname" name="message" placeholder="ملاحظة" ></textarea> 
+	  
+	    <input style="text-align : center;" type="submit" value="إرسال">
+	  </form>
+  </div>
+
+</div>
+<!-- ------------------------ -->
+        <main>
+			<article id="post-46" class="post-46 page type-page status-publish hentry">
+		        <header class="entry-header">
+		        	<h1 style="text-align: center;" class="entry-title uk-margin-top">Conditions générale de ventes</h1>
+		        </header><!-- .entry-header -->
+		    	<div class="entry-content">
+			        <h2>Objet</h2>
+					<p>Les présentes conditions générales de vente ont pour objet de définir les droits et	obligations des parties dans le cadre de la vente des produits de la société IQRAE.CLOUD sur Internet, par l’intermédiaire de la plate-forme.<br>
+					Le fait de cocher la case «J&#39;accepte les Conditions Générales de Vente» signifie à la fois que vous achetez le ou les biens présentés et également que vous acceptez les <strong>présentes Conditions Générales de Vente.</strong> (ci-après, le «Site»).</p>
+					<p><strong>Il est demandé à l’acheteur de lire attentivement ces conditions avant de commander:</strong></p>
+					<h2>Produits</h2>
+					<p>Les produits proposés à la vente par IQRAE.CLOUD sont ceux figurant sur le site au jour
+de la consultation du site par l&#39;utilisateur.
+Nos articles sont proposés dans la limite des stocks disponibles et pour ceux non stockés
+par nos soins, dans la limite de leur disponibilité auprès des fournisseurs de
+IQRAE.CLOUD
+Bien que nos bases de données soient régulièrement mises à jour, certains articles
+peuvent être provisoirement ou définitivement indisponibles chez nos fournisseurs. Si
+un produit n&#39;est plus en stock, IQRAE.CLOUD s&#39;engage à informer le consommateur au
+plus vite.
+IQRAE.COULD fait connaître à l&#39;Utilisateur et au Consommateur l&#39;ensemble des
+caractéristiques essentielles des produits proposés : tailles, couleurs, compositions,
+descriptifs, prix, cela dans la plus grande exactitude possible. Toutefois, si des erreurs ou
+omissions ont pu se produire quant à cette présentation, la responsabilité de
+IQRAE.CLOUD ne pourrait être engagée.
+Les produits demeurent la propriété de IQRAE.CLOUD jusqu&#39;au complet encaissement
+
+du prix par IQRAE.CLOUD.</p>
+					<h2>Prix</h2>
+					<p>sont indiqués en dirhams. Les prix indiqués tiennent compte d&#39;éventuelles réductions
+ainsi que de la T.V.A (Taxe sur la Valeur Ajoutée), applicables au jour de la commande.
+IQRAE.CLOUD se réserve le droit de modifier ses prix à tout moment. Les produits
+seront facturés sur la base des tarifs en vigueur au moment de l&#39;enregistrement de la
+commande, sous réserve néanmoins de la disponibilité des produits.</p>
+					<h2>Commande</h2>
+					<p>Lors de sa commande, le Consommateur accepte de fournir les informations requises
+(nom, adresse, téléphone, adresse e-mail, etc.).
+Dès que le Consommateur a validé sa commande, il est considéré comme ayant accepté
+en connaissance de cause et sans réserve les prix, volumes et quantités proposés.
+IQRAE.CLOUD confirmera au Consommateur l&#39;acceptation de sa commande par l&#39;envoi
+d&#39;un message de confirmation à l&#39;adresse e-mail que ce dernier aura communiqué. La
+vente ne sera conclue qu&#39;à compter de l&#39;envoi de ladite confirmation de commande.
+
+IQRAE.CLOUD se réserve le droit de refuser ou d&#39;annuler toute commande d&#39;un
+consommateur notamment en cas d&#39;insolvabilité dudit consommateur ou dans
+l&#39;hypothèse d&#39;un défaut de paiement de la commande concernée ou d&#39;une livraison
+antérieure ou d&#39;un litige relatif au paiement d&#39;une commande antérieure. IQRAE.CLOUD
+se réserve le droit, dans le cadre des procédures de traitement sécurisé des
+commandes, de refuser la confirmation d&#39;une commande qui ne répondrait pas à ses
+critères de sécurité.
+Les mentions indiquées par l’Utilisateur et/ou le Consommateur, lors de la saisie des
+informations inhérentes à sa commande engagent celui-ci. IQRAE.CLOUD ne saurait être
+tenu responsable des erreurs commises par l’Utilisateur et le Consommateur dans le
+libellé des coordonnées du destinataire de la commande (adresse de livraison, adresse
+de facturation notamment) et des retards de livraison ou de l&#39;impossibilité de livrer les
+produits commandés que ces erreurs pourraient engendrer.</p>
+					<h2>Preuve des transactions</h2>
+					<p>Les informations enregistrées telles que des communications, bons de commandes ou
+factures, sont archivées et conservées dans les systèmes informatiques de
+IQRAE.CLOUD ou de ses partenaires, et peuvent être produits à titre de preuve de
+l’ensemble des transactions commerciales passées entre le Consommateur et la société
+IQRAE.CLOUD</p>
+					<h2>Force majeure</h2>
+					<p>IQRAE.CLOUD ne saurait être tenu pour responsable de l&#39;inexécution du contrat conclu
+due à la survenance d&#39;un événement de force majeure.
+En ce qui concerne les produits achetés pour satisfaire les besoins professionnels,
+IQRAE.CLOUD n&#39;encourra aucune responsabilité pour tous dommages indirects du fait
+des présentes, perte d&#39;exploitation, perte de profit, dommages ou frais, qui pourraient
+survenir.</p>
+					<h2>Défaut de conformité de la marchandise</h2>
+					<p>Il est recommandé de vérifier le bon état du produit au moment de la livraison. Cette
+vérification doit porter sur la qualité, les quantités et les références des marchandises
+ainsi que leur conformité à la commande. Aucune réclamation ne sera prise en compte
+après un délai de sept jours à compter du jour de la livraison. La marchandise
+comportant un défaut de conformité reconnu, signalé dans le délai sus indiqué, fait
+l&#39;objet d&#39;un remplacement ou d&#39;une remise en l&#39;état, à l&#39;exclusion de tout
+dédommagement, à quelque titre que ce soit.</p>
+					<h2>Expédition &amp; livraison</h2>
+					<p>IQRAE.CLOUD assure la livraison de toute commande client à l´adresse indiquée dans le
+bon de commande.
+
+Délais de livraison
+Sauf cas de force majeur, IQRAE.CLOUD est amenée à exécuter toute commande client
+validée dans un délai maximum de 2 jours à compter du lendemain du jour où le client
+exécute sa commande, sous réserve de stock disponible. Pour toute commande passée
+le vendredi, le colis est expédié le lundi.
+
+Délai d’expédition des colis
+Le délai d´expédition est généralement de 2 jours à compter du lendemain du jour
+d´exécution de la commande, sous réserve de stock disponible et après validation du
+règlement.
+Les délais de livraison sont donnés à titre indicatif. Ces délais tiennent compte du délai
+de transport qui varie en fonction de la destination et du mode de transport utilisé.
+En cas de retard de livraison ou de rupture de stock imprévisible chez nos fournisseurs,
+la responsabilité du site ne peut être engagée.
+Le client ne peut se prévaloir du dépassement du délai de livraison donné à titre
+indicatif pour demander l’annulation de la commande ou des dommages-intérêts.
+Modes d´expédition
+IQRAE.CLOUD peut mandater différents prestataires pour effectuer les livraisons, dont
+le Service livraison à domicile à Meknès, par CTM aussi par SDTM
+Tous les colis sont expédiés à l´adresse indiquée dans le bon de commande client.
+IQRAE.CLOUD procède à la livraison du lundi au dimanche.
+</p>
+					<h2>Rétractation</h2>
+					<p>Le Consommateur bénéficie d&#39;un délai de rétractation de 7 jours à compter de la
+réception de sa commande pour retourner le(s) produit(s) pour remboursement sans
+pénalité.
+Un e-mail sera envoyé au Consommateur pour l’informer des différentes étapes de la
+procédure de retour (en attente du colis, colis reçu, retour refusé, retour accepté).
+Le remboursement selon le mode de paiement choisi par le Consommateur lors de la
+commande sera envoyé dans un délai de 15 jours.
+Les frais d’envoi et de retour sont à la charge du client. Seuls les articles retournés dans
+leur emballage d&#39;origine seront acceptés.
+Attention, les livres scolaires sont en commande ferme. Il nous est impossible de les
+échanger ou de les rembourser, sauf erreur de notre part.
+En cas de retours abusifs, la société IQRAE.CLOUD se réserve le droit de refuser une
+commande ultérieure.</p>
+					<h2>Réserve de propriété</h2>
+					<p>IQRAE.CLOUD conserve la propriété pleine et entière des produits vendus jusqu&#39;au
+paiement intégral, taxes comprises.</p>
+					<h2>Coordonnées de la société</h2>
+					<p>
+					www.IQRAE.CLOUD
+					</br>Nos locaux commerciaux : 21.DB ELBAKRI.ELMELLAH MEKNES MAROC
+					</br>dépôts Sidi bouzakri
+					</br>Numéro de commerçant : 0659-80-87-23
+					</br>Email : ayoub.iqrae@gmail.com
+					</br>Mise à jour des conditions générales de vente</p>
+				</div><!-- .entry-content -->
+			</article>
+        </main>
+		<footer class="site-footer">
+			<div class="footer-particles-container">
+				<canvas id="footer-particles"></canvas>
+			</div>
+			<div class="site-footer-top">
+				<section class="cta section text-light">
+					<div class="container-sm">
+						<div class="cta-inner section-inner">
+							<div class="cta-header text-center">
+								<h2 class="section-title mt-0">معلومات عن المنتوج</h2>
+								<p class="section-paragraph">قابلة للتعديل إلى زوايا متعددة </p>
+								<p class="section-paragraph">من السهل حملها وتخزينها</p>
+								<p class="section-paragraph">مصنوع من مادة صلبة صعبة الإنكسار </p>
+								<p class="section-paragraph">متعدد الإستعمالات: الدراسة، الطبخ، النقل من دفتر لآخر، الرسم ... وأكثر</p>
+								<div class="cta-cta">
+									<button id="myBtn2" class="button button-primary button-wide-mobile" href="#"> أطلب الآن</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="site-footer-bottom">
+				<div class="container">
+					<div class="site-footer-inner">
+						<div class="brand footer-brand">
+							<a href="#">
+								<img src="dist/images/logo.svg" alt="Venus logo">
+							</a>
+						</div>
+						<ul class="footer-links list-reset">
+							<li>
+								<a href="#" id="cnta"> تواصل معنا</a>
+							</li>
+							<li>
+								<a href="">الشروط العامة للشراء</a>
+							</li>
+							<li>
+								<a href="/">القائمة الرئيسية</a>
+							</li>
+						</ul>
+						<ul class="footer-social-links list-reset">
+							<li>
+								<a href="#">
+									<span class="screen-reader-text">Facebook</span>
+									<svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+										<path d="M6.023 16L6 9H3V6h3V4c0-2.7 1.672-4 4.08-4 1.153 0 2.144.086 2.433.124v2.821h-1.67c-1.31 0-1.563.623-1.563 1.536V6H13l-1 3H9.28v7H6.023z" fill="#FFF"/>
+									</svg>
+								</a>
+							</li>
+						</ul>
+						<div class="footer-copyright">&copy; 2021 شركة مكتبة إقرأ جميع الحقوق محفوظة</div>
+					</div>
+				</div>
+			</div>
+        </footer>
+    </div>
+
+    <script type="text/javascript">
+    	// Get the modal
+var modal = document.getElementById("myModal");
+var contact = document.getElementById("contact");
+
+
+var btn2 = document.getElementById("myBtn2");
+
+var cnta = document.getElementById("cnta");
+
+
+btn2.onclick = function() {
+  modal.style.display = "block";
+}
+
+cnta.onclick = function() {
+  contact.style.display = "block";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+  if (event.target == contact) {
+    contact.style.display = "none";
+  }
+} 
+
+    </script>
+</body>
+</html>

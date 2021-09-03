@@ -39,7 +39,7 @@ hr {
 }
 
 pre {
-  font-family: monospace, monospace;
+font-family: Tajawal;
   font-size: 1em;
 }
 
@@ -67,7 +67,7 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: Tajawal;
   font-size: 1em;
 }
 
@@ -123,10 +123,11 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: sans-serif;
+  font-family: Tajawal;
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+  text-align: right;
 }
 
 button,
@@ -228,4 +229,8 @@ template {
 
 [hidden] {
   display: none;
+}
+
+form {
+  text-align: right;
 }

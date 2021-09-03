@@ -17,7 +17,7 @@ button,
 input,
 select,
 textarea {
-	@include font-family(base);
+	font-family: Tajawal;
 }
 
 a {
@@ -28,9 +28,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	clear: both;
 	color: color(typography, 1);
-	@if ( get-font-family(heading) != get-font-family(base) ) {
-		@include font-family(heading);
-	}
+	font-family: Tajawal;
 	@include font-weight(semibold);
 }
 
@@ -155,6 +153,7 @@ h3,
 .h3 {
 	margin-top: 36px;
 	margin-bottom: 12px;
+	text-align: right;
 }
 
 h4, h5, h6,
@@ -166,6 +165,7 @@ h4, h5, h6,
 p {
 	margin-top: 0;
 	margin-bottom: 24px;
+	text-align: right;
 }
 
 dfn, cite, em, i {
@@ -214,7 +214,7 @@ pre .h3,
 pre .h4,
 pre .h5,
 pre .h6  {
-	@include font-family(pre);
+	font-family: Tajawal;
 }
 
 pre, code, kbd, tt, var {
@@ -232,7 +232,7 @@ pre {
 }
 
 code, kbd, tt, var {
-	@include font-family(code);
+	font-family: Tajawal;
 	@include font-size(7, mobile, true);
 	padding: 2px 4px;
 }

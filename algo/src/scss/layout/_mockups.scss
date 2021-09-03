@@ -2,6 +2,13 @@
 	position: relative;
 }
 
+@include media( '<medium' ) {
+
+    .friwt {
+		display: none;
+    }
+}
+
 .mockup-bg {
 	pointer-events: none;
 
@@ -19,7 +26,7 @@
 
 .device-mockup {
 	position: relative;
-	width: 350px;
+	width: 700px;
 	height: auto;
 	margin: 0 auto;
 	z-index: 1;
