@@ -17,6 +17,7 @@
         $message .= "/-- Commande INFOS --/ \r\n";
         $message .= 'Nom : ' . $_POST['name'] . "\r\n";
         $message .= 'Telephone : ' . $_POST['tel'] . "\r\n";
+        $message .= 'Ville : ' . $_POST['ville'] . "\r\n";
         $message .= 'Adresse : ' . $_POST['adresse'] . "\r\n";
         $message .= "/-- END Commande INFOS --/ \r\n";
         telegram_message($message);
